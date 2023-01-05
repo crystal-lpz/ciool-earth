@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #273B09;
+        /* background-color:#31493C; */
+        margin: 0;
+      }
+      header {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.596),
+            rgba(0, 0, 0, 0.267)
+          ),
+          url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/228/original/boudhayan-bardhan-60tataLkJ0U-unsplash.jpg?16726968);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding-bottom: 400px;
+      }
+      header img {
+        width: 70px;
+      }
+      header ul {
+        display: flex;
+      }
+
+      nav {
+        padding: 20px 0;
+      }
+      nav ul {
+        padding: 0;
+        margin: 0;
+      }
+      nav li {
+        display: inline;
+        list-style: none;
+        line-height: 42px;
+        margin-left: 15px;
+        color: white;
+        font-size: 20px;
+      }
+      header h1 {
+        color: white;
+        font-size: 148px;
+        text-decoration: none;
+        font-family: "Anton", sans-serif;
+        letter-spacing: 5px;
+        line-height: 161px;
+        margin-bottom: 10px;
+      }
+
+      header h2 {
+        font-size: 25px;
+        margin-top: 0;
+        padding-right: 500px;
+        color: white;
+        opacity: 70%;
+      }
+      .container {
+        display: block;
+        padding: 60px 300px;
+        max-width: 1400px;
+        margin: 0 auto;
+
+      }
+      h2 {
+        font-size: 34px;
+        font-family: "Anton", sans-serif;
+        letter-spacing: 5px;
+        padding-right: 500px;
+        color: #FDF2CD;
+        margin: 0;
+       
+      }
+      h3 {
+        color:white;
+        font-size: 60px;
+        margin: 0;
+      }
+      h4{
+        color:#FDF2CD;
+        font-size: 30px;
+        margin:0 0 16px 0;
+        padding: 0;
+      }
+      hr {
+        background-color: #a9bf04;
+        opacity: 100%;
+        height: 1px;
+      }
+
+      p {
+        font-size: 26px;
+        padding-top: 0;
+        margin-top: 0;
+        color: white;
+        opacity: 70%;
+      }
+      section img {
+        display: flex;
+        flex: content;
+        -o-object-fit: cover;
+        object-fit: cover;
+        flex: 0 0 55%;
+      }
+      
+      section.section-one{
+        background-color:#002400;
+      }
+      section.section-one h3{
+        font-size: 54px;
+        font-family: "Anton", sans-serif;
+        letter-spacing: 3px;
+        margin: 100px 0;
+        color: #FDF2CD;
+      }
+      section.section-two{
+        flex: 0 0 45%;
+      }
+     
+      section.section-two img{
+        display:block;
+        max-height: 900px;
+        filter: brightness(90%);
+         transition: all 0.5s ease-out;
+      }
+      section.section-two img:hover{
+        filter: brightness(130%) contrast(100%);
+         transition: all 0.5s ease-out;
+      }
+
+      section.section-four{
+       background-color: #58641D;
+       flex: 0 0 45%;
+      }
+      section.section-four h3{
+        font-family: "Anton", sans-serif;
+        letter-spacing: 5px;
+        margin-top:230px;
+        color: #FDF2CD;
+        padding-right: 10px;
+      }
+      section.section-four p{
+        margin-bottom: 270px;
+      }
+      section.section-five{
+        background-color: #002400;
+        padding: 20px 20px;
+      }
+      section.section-five h3{
+        font-family: "Anton", sans-serif;
+        letter-spacing: 5px;
+        margin-top:30px;
+        margin-bottom: 100px;
+        margin-left: 300px;
+        color: #FDF2CD;
+        padding-right: 10px;
+        font-size: 90px;
+      }
+      
+      .content{
+        margin-left: 300px;
+      }
+      .group{
+        height:100%;
+        width: 100%;
+      }
+     
+      .secondary-section h2 {
+        color: #a9bf04;
+        display: flex;
+        padding: 0;
+      }
+
+      .responsive-img {
+        width: 100%;
+      }
+      .responsive-video{
+        width: 100%;
+        height:100%;
+        box-shadow:0px -1px 12px 0px rgba(0, 36, 0, 0.479);
+      }
+      .grid {
+        display: grid;
+        align-items: center;
+      }
+      .grid.grid-two {
+        grid-template-columns: 1fr 1fr;
+        gap: 36px;
+        
+      }
+      .grid.grid-three {
+        grid-template-columns: 1fr 1fr 1fr; 
+      }
+      .grid.grid-three.card{
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 16px;
+      }
+
+      .img {
+        width: 635px;
+        height: 700px;
+      }
+      .img.img-left {
+        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/317/original/2.png?1672783618);
+      }
+      .img.img-center {
+        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/320/original/2.png?1672784423);
+      }
+      .img.img-right {
+        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/465/original/People.png?1672875959);
+      }
+      .card {
+       background-color:#58641D;
+       border-radius: 40px;
+       height: 700px;
+       width: 518px;
+      }
+      .card-body {
+        padding: 30px;
+      }
+      .card-header img {
+       border-radius:40px 40px 0 0 ;
+      }
+      .card-header.grid {
+        grid-gap: 0;
+        aspect-ratio: 1/1;
+      }
+      .center{
+        justify-content: center;
+        justify-items: center;
+      }
+    </style>
+    <title>Cool Earth</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <ul>
+            <li>
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/472/original/Coolearth_logo.svg_%281%29.png?1672877634"
+                class="logo"
+                alt="Cool Eath"
+                title="Home Page"
+              />
+            </li>
+
+            <li>Home</li>
+            <li>Mission</li>
+            <li>Measuring Impact</li>
+          </ul>
+        </nav>
+
+        <h1>
+          PROTECT <br />
+          RAINFOREST
+        </h1>
+        <h2>
+          Indigenous peoples and local communities are fighting for climate
+          justice. Join them.
+        </h2>
+      </div>
+    </header>
+
+    <section class="container section-one">
+      <h3>
+          Discover the intersection of people, rainforest and climate.
+          </h3>
+          
+     
+     
+    </section>
+    <section class="section-two">
+      
+      <div class="grid grid-two">
+        <div class="content">
+          <h2>MISSION</h2>
+          <hr />
+          <h3>
+            Cool Earth exists because right now, the world is in a climate
+            crisis.
+          </h3>
+          <p>
+            The most effective way to fight back is to protect the best
+            carbon-storing technology that already exists: rainforest. And the
+            best way to do that? Back, support, and listen to the people living
+            there. Indigenous peoples and local communities have lived in
+            balance with rainforest for thousands of years and are the real
+            rainforest experts. They are people who face extreme injustice
+            whilst living on the front line of the climate crisis.
+          </p>
+        </div>
+        <div class="group">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/315/original/andreas-dress-WPQqM5dnXuk-unsplash.jpg?1672782369"
+            class="responsive-img"
+            alt=""
+          />
+        </div>
+      </div>
+
+
+      </div>
+ 
+    </section>
+     
+      <!-- <h3>Cool Earth Believes in</h3> -->
+    </section>
+    <section class="section">
+      <div class="grid grid-three">
+        <div class="img img-left"></div>
+        <div class="img img-center"></div>
+        <div class="img img-right"></div>
+      </div>
+    </section>
+    <section class="section-four">
+      
+      <div class="grid grid-two">
+        <div class="content">
+          <h3>Take Climate Action</h3>
+          <p>We all know that the best approach to tackling climate breakdown is protecting rainforest and reducing emissions.<p>
+        </div>
+        <div class="group">
+          <iframe class="responsive-video" src="https://www.youtube.com/embed/LnMv_gAoeCg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+
+
+      </div>
+ 
+    </section>
+    <section class="section-five">
+      <h3>MEASURING IMPACTS</h3>
+      <div class="grid grid-three center">
+        <div class="card">
+          <div class="card-header">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/311/original/andrew-spencer-L73X3qHVAN4-unsplash.jpg?1672780946" class="responsive-img" alt="">
+          </div>
+          <div class="card-body">
+                <h4>What we measure</h4>
+                <p>
+                  Forest cover and causes of forest loss; the number of people we support and how their needs change over time; the changes that result from our activities; peoples’ experience of working with us; our ability to adapt to unexpected situations.
+                </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/463/original/nareeta-martin-USADCV83HOE-unsplash.jpg?1672875593" class="responsive-img" alt="">
+          </div>
+          <div class="card-body">
+                <h4>How we measure</h4>
+                <p>
+                  By building capacity in regional teams to develop monitoring and reporting processes; by designing processes and spaces for learning and reflection; by trialing new approaches to collecting information about changes.
+                </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/462/original/ivars-utinans-vkQgb1lZZPQ-unsplash.jpg?1672875212" class="responsive-img">
+          </div>
+          <div class="card-body">
+                <h4>Why we measure</h4>
+                <p>To design better programmes; to share insights and support informed decision making; to create accountability; to build in adaptive programme management; to do no harm.</p>
+          </div>
+        </div>
+       
+       
+      
+      </div>    
+               
+             
+    </section>
+  </body>
+</html>
+
+<!--        <p>
+          
+
+
+          Cool Earth was founded in 2007 by Johan Eliasch and Lord Field as the result of a shared desire to halt deforestation. Today, the charity is dedicated to addressing climate change through the protection of rainforests, by giving control back to the people who live in them.
+        </p> -->
