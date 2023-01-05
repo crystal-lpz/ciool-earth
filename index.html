@@ -12,7 +12,7 @@
     />
     <style>
       body {
-        background-color: #273B09;
+        background-color: #273b09;
         /* background-color:#31493C; */
         margin: 0;
       }
@@ -25,7 +25,7 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        padding-bottom: 400px;
+        padding-bottom: 200px;
       }
       header img {
         width: 70px;
@@ -61,6 +61,7 @@
 
       header h2 {
         font-size: 25px;
+
         margin-top: 0;
         padding-right: 500px;
         color: white;
@@ -71,26 +72,24 @@
         padding: 60px 300px;
         max-width: 1400px;
         margin: 0 auto;
-
       }
       h2 {
         font-size: 34px;
         font-family: "Anton", sans-serif;
         letter-spacing: 5px;
         padding-right: 500px;
-        color: #FDF2CD;
+        color: #fdf2cd;
         margin: 0;
-       
       }
       h3 {
-        color:white;
+        color: white;
         font-size: 60px;
         margin: 0;
       }
-      h4{
-        color:#FDF2CD;
+      h4 {
+        color: #fdf2cd;
         font-size: 30px;
-        margin:0 0 16px 0;
+        margin: 0 0 16px 0;
         padding: 0;
       }
       hr {
@@ -113,69 +112,70 @@
         object-fit: cover;
         flex: 0 0 55%;
       }
-      
-      section.section-one{
-        background-color:#002400;
+
+      section.section-one {
+        background-color: #002400;
       }
-      section.section-one h3{
-        font-size: 54px;
+      section.section-one h3 {
+        font-size: 40px;
+        text-align: center;
         font-family: "Anton", sans-serif;
         letter-spacing: 3px;
-        margin: 100px 0;
-        color: #FDF2CD;
+        margin: 160px 0;
+        color: #fdf2cd;
       }
-      section.section-two{
+      section.section-two {
         flex: 0 0 45%;
       }
-     
-      section.section-two img{
-        display:block;
+
+      section.section-two img {
+        display: block;
         max-height: 900px;
         filter: brightness(90%);
-         transition: all 0.5s ease-out;
+        transition: all 0.5s ease-out;
       }
-      section.section-two img:hover{
+      section.section-two img:hover {
         filter: brightness(130%) contrast(100%);
-         transition: all 0.5s ease-out;
+        transition: all 0.5s ease-out;
       }
 
-      section.section-four{
-       background-color: #58641D;
-       flex: 0 0 45%;
+      section.section-four {
+        background-color: #58641d;
+        flex: 0 0 45%;
       }
-      section.section-four h3{
+      section.section-four h3 {
         font-family: "Anton", sans-serif;
         letter-spacing: 5px;
-        margin-top:230px;
-        color: #FDF2CD;
+        margin-top: 230px;
+        color: #fdf2cd;
         padding-right: 10px;
       }
-      section.section-four p{
+      section.section-four p {
         margin-bottom: 270px;
       }
-      section.section-five{
+      section.section-five {
         background-color: #002400;
         padding: 20px 20px;
       }
-      section.section-five h3{
+      section.section-five h3 {
         font-family: "Anton", sans-serif;
         letter-spacing: 5px;
-        margin-top:30px;
+        margin-top: 30px;
         margin-bottom: 100px;
         margin-left: 300px;
-        color: #FDF2CD;
+        color: #fdf2cd;
         padding-right: 10px;
         font-size: 90px;
       }
-      
-      .content{
+
+      .content {
         margin-left: 300px;
       }
-      .group{
-        height:100%;
+      .group {
+        height: 100%;
         width: 100%;
       }
-     
+
       .secondary-section h2 {
         color: #a9bf04;
         display: flex;
@@ -185,10 +185,11 @@
       .responsive-img {
         width: 100%;
       }
-      .responsive-video{
+      .responsive-video {
+        display: block;
         width: 100%;
-        height:100%;
-        box-shadow:0px -1px 12px 0px rgba(0, 36, 0, 0.479);
+        height: 100%;
+        box-shadow: 0px -1px 12px 0px rgba(0, 36, 0, 0.479);
       }
       .grid {
         display: grid;
@@ -197,12 +198,11 @@
       .grid.grid-two {
         grid-template-columns: 1fr 1fr;
         gap: 36px;
-        
       }
       .grid.grid-three {
-        grid-template-columns: 1fr 1fr 1fr; 
+        grid-template-columns: 1fr 1fr 1fr;
       }
-      .grid.grid-three.card{
+      .grid.grid-three.card {
         grid-template-columns: 1fr 1fr 1fr;
         gap: 16px;
       }
@@ -220,25 +220,73 @@
       .img.img-right {
         background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/465/original/People.png?1672875959);
       }
+
       .card {
-       background-color:#58641D;
-       border-radius: 40px;
-       height: 700px;
-       width: 518px;
+        background-color: #58641d;
+        border-radius: 40px;
+        height: 700px;
+        width: 518px;
+      }
+      .card:hover {
+        background-color: #273b09;
       }
       .card-body {
         padding: 30px;
       }
       .card-header img {
-       border-radius:40px 40px 0 0 ;
+        border-radius: 40px 40px 0 0;
       }
       .card-header.grid {
         grid-gap: 0;
         aspect-ratio: 1/1;
       }
-      .center{
+      .center {
         justify-content: center;
         justify-items: center;
+      }
+      .grid-footer {
+        grid-template-columns: 1fr 2fr 2fr;
+        gap: 30px;
+      }
+      footer {
+        color: white;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.671),
+            rgba(0, 0, 0, 0.671)
+          ),
+          url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/215/original/filippo-cesarini-RyKnhwO7wMw-unsplash.jpg?1672695131);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 150px 100px;
+      }
+
+      footer h3 {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.5;
+      }
+      footer p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: white;
+        opacity: 0.7;
+      }
+      footer ul {
+        margin: 0;
+        padding: 0;
+      }
+      footer li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      footer a {
+        color: #dd9934;
+        font-weight: bold;
+        text-decoration: none;
+        opacity: 0.7;
       }
     </style>
     <title>Cool Earth</title>
@@ -275,15 +323,9 @@
     </header>
 
     <section class="container section-one">
-      <h3>
-          Discover the intersection of people, rainforest and climate.
-          </h3>
-          
-     
-     
+      <h3>Discover the intersection of people, rainforest and climate.</h3>
     </section>
     <section class="section-two">
-      
       <div class="grid grid-two">
         <div class="content">
           <h2>MISSION</h2>
@@ -310,14 +352,8 @@
           />
         </div>
       </div>
-
-
-      </div>
- 
     </section>
-     
-      <!-- <h3>Cool Earth Believes in</h3> -->
-    </section>
+
     <section class="section">
       <div class="grid grid-three">
         <div class="img img-left"></div>
@@ -326,68 +362,144 @@
       </div>
     </section>
     <section class="section-four">
-      
       <div class="grid grid-two">
         <div class="content">
           <h3>Take Climate Action</h3>
-          <p>We all know that the best approach to tackling climate breakdown is protecting rainforest and reducing emissions.<p>
+          <p>
+            We all know that the best approach to tackling climate breakdown is
+            protecting rainforest and reducing emissions.
+          </p>
+          <p></p>
         </div>
+
         <div class="group">
-          <iframe class="responsive-video" src="https://www.youtube.com/embed/LnMv_gAoeCg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe
+            class="responsive-video"
+            src="https://www.youtube.com/embed/LnMv_gAoeCg"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
-
-
-      </div>
- 
     </section>
     <section class="section-five">
       <h3>MEASURING IMPACTS</h3>
       <div class="grid grid-three center">
         <div class="card">
           <div class="card-header">
-            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/311/original/andrew-spencer-L73X3qHVAN4-unsplash.jpg?1672780946" class="responsive-img" alt="">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/311/original/andrew-spencer-L73X3qHVAN4-unsplash.jpg?1672780946"
+              class="responsive-img"
+              alt=""
+            />
           </div>
           <div class="card-body">
-                <h4>What we measure</h4>
-                <p>
-                  Forest cover and causes of forest loss; the number of people we support and how their needs change over time; the changes that result from our activities; peoples’ experience of working with us; our ability to adapt to unexpected situations.
-                </p>
+            <h4>What we measure</h4>
+            <p>
+              Forest cover and causes of forest loss; the number of people we
+              support and how their needs change over time; the changes that
+              result from our activities; peoples’ experience of working with
+              us; our ability to adapt to unexpected situations.
+            </p>
           </div>
         </div>
         <div class="card">
           <div class="card-header">
-            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/463/original/nareeta-martin-USADCV83HOE-unsplash.jpg?1672875593" class="responsive-img" alt="">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/463/original/nareeta-martin-USADCV83HOE-unsplash.jpg?1672875593"
+              class="responsive-img"
+              alt=""
+            />
           </div>
           <div class="card-body">
-                <h4>How we measure</h4>
-                <p>
-                  By building capacity in regional teams to develop monitoring and reporting processes; by designing processes and spaces for learning and reflection; by trialing new approaches to collecting information about changes.
-                </p>
+            <h4>How we measure</h4>
+            <p>
+              By building capacity in regional teams to develop monitoring and
+              reporting processes; by designing processes and spaces for
+              learning and reflection; by trialing new approaches to collecting
+              information about changes.
+            </p>
           </div>
         </div>
         <div class="card">
           <div class="card-header">
-            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/462/original/ivars-utinans-vkQgb1lZZPQ-unsplash.jpg?1672875212" class="responsive-img">
+            <img
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/462/original/ivars-utinans-vkQgb1lZZPQ-unsplash.jpg?1672875212"
+              class="responsive-img"
+            />
           </div>
           <div class="card-body">
-                <h4>Why we measure</h4>
-                <p>To design better programmes; to share insights and support informed decision making; to create accountability; to build in adaptive programme management; to do no harm.</p>
+            <h4>Why we measure</h4>
+            <p>
+              To design better programmes; to share insights and support
+              informed decision making; to create accountability; to build in
+              adaptive programme management; to do no harm.
+            </p>
           </div>
         </div>
-       
-       
-      
-      </div>    
-               
-             
+      </div>
     </section>
+
+    <footer>
+      <section class="grid grid-footer">
+        <div>
+          <h3>Cool Earth</h3>
+          <ul>
+            <li>
+              <a href="https://www.hojeanmusic.com/" target="_blank">
+                Hojean's Official website</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/channel/UC_LZRvNEH76JoU3chaY86xg/featured"
+                target="_blank"
+                >Youtube channel</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://open.spotify.com/artist/0ENnerFBtqPaVUcHadXU2w?si=AC7JPK25TEaldN1qw54QAw"
+                target="_blank"
+                >Hojean's Spotify</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3>About Me</h3>
+          <p>
+            Hi! My name is Crystal lopez and I'm an inspiring front-end
+            developer. I chose the Cool Earth as my suject for the NGO Landing
+            Page Challenge for SheCodes.
+          </p>
+        </div>
+        <div>
+          <h3>About this website</h3>
+          <p>
+            Cool Earth was founded in 2007 by Johan Eliasch and Lord Field as
+            the result of a shared desire to halt deforestation. Today, the
+            charity is dedicated to addressing climate change through the
+            protection of rainforests, by giving control back to the people who
+            live in them.
+          </p>
+          <p>
+            I created this page as part of the NGO Landing Page Challenge for
+            SheCodes to develop my coding skills. This project was created by
+            <a href="https://www.crystallpzcodes.com/" target="_blank"
+              >Crystal Lopez</a
+            >
+            and it's
+            <a
+              href="https://github.com/crystal-lpz/Responsive-Add-on.git"
+              target="_blank"
+              >opened sourced.</a
+            >
+          </p>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>
-
-<!--        <p>
-          
-
-
-          Cool Earth was founded in 2007 by Johan Eliasch and Lord Field as the result of a shared desire to halt deforestation. Today, the charity is dedicated to addressing climate change through the protection of rainforests, by giving control back to the people who live in them.
-        </p> -->
