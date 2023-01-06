@@ -4,16 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Questrial&display=swap"
       rel="stylesheet"
     />
+    <!--  -->
     <style>
       body {
         background-color: #273b09;
-        /* background-color:#31493C; */
+        overflow-x: hidden;
         margin: 0;
       }
       header {
@@ -25,6 +27,7 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        background-attachment: fixed;
         padding-bottom: 200px;
       }
       header img {
@@ -44,10 +47,11 @@
       nav li {
         display: inline;
         list-style: none;
-        line-height: 42px;
-        margin-left: 15px;
+        line-height: 50px;
+        margin-right: 43px;
         color: white;
         font-size: 20px;
+        font-family: "Questrial", sans-serif;
       }
       header h1 {
         color: white;
@@ -61,9 +65,10 @@
 
       header h2 {
         font-size: 25px;
-
+        font-family: "Questrial", sans-serif;
         margin-top: 0;
         padding-right: 500px;
+        line-height: 30px;
         color: white;
         opacity: 70%;
       }
@@ -82,6 +87,7 @@
         margin: 0;
       }
       h3 {
+        font-family: "Questrial", sans-serif;
         color: white;
         font-size: 60px;
         margin: 0;
@@ -115,13 +121,15 @@
 
       section.section-one {
         background-color: #002400;
+        padding-top: 200px;
+        padding-bottom: 200px;
       }
       section.section-one h3 {
-        font-size: 40px;
+        font-size: 87px;
         text-align: center;
         font-family: "Anton", sans-serif;
         letter-spacing: 3px;
-        margin: 160px 0;
+        margin: 106px 0;
         color: #fdf2cd;
       }
       section.section-two {
@@ -140,22 +148,24 @@
       }
 
       section.section-four {
-        background-color: #58641d;
+        background-color: #fdf2cd;
         flex: 0 0 45%;
       }
       section.section-four h3 {
         font-family: "Anton", sans-serif;
         letter-spacing: 5px;
         margin-top: 230px;
-        color: #fdf2cd;
+        color: #002400;
         padding-right: 10px;
       }
       section.section-four p {
         margin-bottom: 270px;
+        color: #002400;
       }
+
       section.section-five {
         background-color: #002400;
-        padding: 20px 20px;
+        padding: 20px 20px 100px 20px;
       }
       section.section-five h3 {
         font-family: "Anton", sans-serif;
@@ -209,16 +219,49 @@
 
       .img {
         width: 635px;
-        height: 700px;
+        height: 900px;
       }
       .img.img-left {
-        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/317/original/2.png?1672783618);
+        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/607/original/1.png?1672961599);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: all 0.5s ease-out;
+      }
+      .img.img-left:hover {
+        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/608/original/2.png?1672961674);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: all 0.5s ease-out;
       }
       .img.img-center {
-        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/320/original/2.png?1672784423);
+        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/613/original/5.png?1672962105);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: all 0.5s ease-out;
+      }
+      .img.img-center:hover {
+        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/614/original/6.png?1672962167);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: all 0.5s ease-out;
       }
       .img.img-right {
-        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/465/original/People.png?1672875959);
+        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/609/original/3.png?1672961845);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: all 0.5s ease-out;
+      }
+      .img.img-right:hover {
+        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/611/original/4.png?1672961947);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: all 0.5s ease-out;
       }
 
       .card {
@@ -244,31 +287,71 @@
         justify-content: center;
         justify-items: center;
       }
-      .grid-footer {
-        grid-template-columns: 1fr 2fr 2fr;
-        gap: 30px;
+
+      .fade-in {
+        opacity: 0;
+        transition: opacity 250ms ease-in;
+      }
+
+      .fade-in.appear {
+        opacity: 1;
+      }
+
+      .from-left {
+        transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
+        transition: opacity 250ms ease-in, transform 600ms ease-in;
+        transition: opacity 250ms ease-in, transform 600ms ease-in,
+          -webkit-transform 600ms ease-in;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        transition: opacity 250ms ease-in, transform 400ms ease-in;
+        opacity: 0;
+      }
+      .from-left.appear {
+        transform: translateX(0);
+        opacity: 1;
       }
       footer {
         color: white;
         background-image: linear-gradient(
-            rgba(0, 0, 0, 0.671),
-            rgba(0, 0, 0, 0.671)
+            rgba(0, 0, 0, 0.527),
+            rgba(0, 0, 0, 0.527)
           ),
-          url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/215/original/filippo-cesarini-RyKnhwO7wMw-unsplash.jpg?1672695131);
+          url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/577/original/mohmed-nazeeh-jSgCHNQqEQ4-unsplash.jpg?1672948858);
         background-size: cover;
-        background-position: center;
         background-repeat: no-repeat;
-        padding: 150px 100px;
+        background-position: center;
+        background-attachment: fixed;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-top: 144px;
+        padding-bottom: 300px;
       }
 
+      .grid-footer {
+        grid-template-columns: 1fr 1fr;
+        align-items: baseline;
+        gap: 30px;
+      }
+      .icon-inline {
+        display: flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .icon-inline li {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-right: 30px;
+      }
       footer h3 {
         font-weight: 700;
-        font-size: 20px;
+        font-size: 30px;
         line-height: 1.5;
       }
       footer p {
         font-weight: 400;
-        font-size: 16px;
+        font-size: 20px;
         line-height: 24px;
         color: white;
         opacity: 0.7;
@@ -283,10 +366,20 @@
         padding: 0;
       }
       footer a {
-        color: #dd9934;
+        color: #a9bf04;
+        font-size: 20px;
         font-weight: bold;
+        line-height: 27px;
         text-decoration: none;
         opacity: 0.7;
+      }
+      footer img {
+        display: block;
+        margin: 0 auto;
+        max-width: 400px;
+      }
+      footer img.icon {
+        max-width: 50px;
       }
     </style>
     <title>Cool Earth</title>
@@ -306,8 +399,15 @@
             </li>
 
             <li>Home</li>
-            <li>Mission</li>
-            <li>Measuring Impact</li>
+            <a href="#mission">
+              <li>Mission</li>
+            </a>
+            <a href="#impact">
+              <li>Measuring Impact</li>
+            </a>
+            <a href="#action">
+              <li>Climate Action</li>
+            </a>
           </ul>
         </nav>
 
@@ -323,11 +423,13 @@
     </header>
 
     <section class="container section-one">
-      <h3>Discover the intersection of people, rainforest and climate.</h3>
+      <h3 class="fade-in">
+        Discover the intersection of people, rainforest and climate.
+      </h3>
     </section>
-    <section class="section-two">
+    <section id="mission" class="section-two">
       <div class="grid grid-two">
-        <div class="content">
+        <div class="content slide-in from-left">
           <h2>MISSION</h2>
           <hr />
           <h3>
@@ -361,15 +463,14 @@
         <div class="img img-right"></div>
       </div>
     </section>
-    <section class="section-four">
+    <section id="action" class="section-four">
       <div class="grid grid-two">
-        <div class="content">
+        <div class="content slide-in from-left">
           <h3>Take Climate Action</h3>
           <p>
             We all know that the best approach to tackling climate breakdown is
             protecting rainforest and reducing emissions.
           </p>
-          <p></p>
         </div>
 
         <div class="group">
@@ -384,8 +485,8 @@
         </div>
       </div>
     </section>
-    <section class="section-five">
-      <h3>MEASURING IMPACTS</h3>
+    <section class="section-five" id="impact">
+      <h3 class="fade-in">MEASURING IMPACTS</h3>
       <div class="grid grid-three center">
         <div class="card">
           <div class="card-header">
@@ -441,65 +542,123 @@
         </div>
       </div>
     </section>
-
+    <section class="background-img"></section>
     <footer>
-      <section class="grid grid-footer">
+      <section>
+        <a href="https://www.coolearth.org/" target="_blank">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/472/original/Coolearth_logo.svg_%281%29.png?1672877634"
+            class="logo responsive-img"
+            alt="Cool Eath"
+            title="Home Page"
+          />
+        </a>
         <div>
-          <h3>Cool Earth</h3>
-          <ul>
+          <ul class="icon-inline">
             <li>
-              <a href="https://www.hojeanmusic.com/" target="_blank">
-                Hojean's Official website</a
+              <a
+                href="https://www.instagram.com/coolearthaction/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/618/original/instagram-new.png?1672966533"
+                  class="icon"
+                  alt=""
+                />
+              </a>
             </li>
             <li>
               <a
-                href="https://www.youtube.com/channel/UC_LZRvNEH76JoU3chaY86xg/featured"
+                href="https://www.youtube.com/user/CoolEarthDotOrg"
                 target="_blank"
-                >Youtube channel</a
+                rel="noopener noreferrer"
               >
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/616/original/152810.png?1672965257"
+                  class="icon"
+                  alt=""
+                />
+              </a>
             </li>
             <li>
               <a
-                href="https://open.spotify.com/artist/0ENnerFBtqPaVUcHadXU2w?si=AC7JPK25TEaldN1qw54QAw"
+                href="https://twitter.com/coolearth"
                 target="_blank"
-                >Hojean's Spotify</a
+                rel="noopener noreferrer"
               >
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/061/617/original/733635.png?1672965407"
+                  class="icon"
+                  alt=""
+                />
+              </a>
             </li>
           </ul>
         </div>
-        <div>
-          <h3>About Me</h3>
-          <p>
-            Hi! My name is Crystal lopez and I'm an inspiring front-end
-            developer. I chose the Cool Earth as my suject for the NGO Landing
-            Page Challenge for SheCodes.
-          </p>
-        </div>
-        <div>
-          <h3>About this website</h3>
-          <p>
-            Cool Earth was founded in 2007 by Johan Eliasch and Lord Field as
-            the result of a shared desire to halt deforestation. Today, the
-            charity is dedicated to addressing climate change through the
-            protection of rainforests, by giving control back to the people who
-            live in them.
-          </p>
-          <p>
-            I created this page as part of the NGO Landing Page Challenge for
-            SheCodes to develop my coding skills. This project was created by
-            <a href="https://www.crystallpzcodes.com/" target="_blank"
-              >Crystal Lopez</a
-            >
-            and it's
-            <a
-              href="https://github.com/crystal-lpz/Responsive-Add-on.git"
-              target="_blank"
-              >opened sourced.</a
-            >
-          </p>
+        <hr />
+        <div class="grid grid-footer">
+          <div>
+            <h3>About Me</h3>
+            <p>
+              Hi! My name is Crystal lopez and I'm an inspiring front-end
+              developer. I chose the Cool Earth as my suject for the NGO Landing
+              Page Challenge for SheCodes. This project was created by
+              <a href="https://www.crystallpzcodes.com/" target="_blank"
+                >Crystal Lopez</a
+              >
+              and it's
+              <a
+                href="https://github.com/crystal-lpz/ciool-earth.git"
+                target="_blank"
+                >opened sourced.</a
+              >
+            </p>
+          </div>
+          <div>
+            <h3>About Cool Earth</h3>
+            <p>
+              Cool Earth was founded in 2007 by Johan Eliasch and Lord Field as
+              the result of a shared desire to halt deforestation. Today, the
+              charity is dedicated to addressing climate change through the
+              protection of rainforests, by giving control back to the people
+              who live in them.
+            </p>
+          </div>
         </div>
       </section>
     </footer>
+    <script>
+      const faders = document.querySelectorAll(".fade-in");
+      const sliders = document.querySelectorAll(".slide-in");
+
+      const appearOptions = {
+        threshold: 0,
+        rootMargin: "0px 0px -299px 0px",
+      };
+
+      const appearOnScroll = new IntersectionObserver(function (
+        entries,
+        appearOnScroll
+      ) {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            return;
+          } else {
+            entry.target.classList.add("appear");
+            appearOnScroll.unobserve(entry.target);
+          }
+        });
+      },
+      appearOptions);
+
+      faders.forEach((fader) => {
+        appearOnScroll.observe(fader);
+      });
+
+      sliders.forEach((slider) => {
+        appearOnScroll.observe(slider);
+      });
+    </script>
   </body>
 </html>
